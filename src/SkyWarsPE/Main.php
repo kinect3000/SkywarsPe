@@ -54,6 +54,7 @@ private $aplayers = 0;
 	
 	public function onCommand(CommandSender $sender, Command $cmd, $label, array $args){
 		switch($cmd->getName()){
+
 			case "skywarshowto":
         			if($sender->hasPermission("skywars.command.howto") or $sender->hasPermission("skywars.command") or $sender->hasPermission("skywars")) { 
 					$sender->sendMessage("----How To Play skywars----");
