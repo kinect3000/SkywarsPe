@@ -45,11 +45,13 @@ private $aplayers = 0;
 		$this->getServer()->getPluginManager()->registerEvents($this, $this);
         	$this->saveDefaultConfig();
             	$this->points = new Config($this->getDataFolder()."points.yml", Config::YAML);
+            	$this->getLogger()->info("SkyWarsPE has been enabled! :D");
 	}
 
 	public function onDisable(){
         	$this->getConfig()->save();
         	$this->points->save();
+        	$this->getLogger()->info("SkyWarsPE has been disabled! :(");
         }
 	
 	public function onCommand(CommandSender $sender, Command $cmd, $label, array $args){
